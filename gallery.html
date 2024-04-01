@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="galleryStyles.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <img src="Logo.png" alt="logo" class="logo">
+    <div class="navbar">
+        <a href="https://w1971490.users.ecs.westminster.ac.uk/HungR/Home.html">Home</a>
+        <a href="https://w1975658.users.ecs.westminster.ac.uk/HungR/profile.html">User Profile</a>
+        <a href="https://w1975658.users.ecs.westminster.ac.uk/HungR/team.html">Teams Page</a>
+        <a href="">Shop</a>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/gallery.html">Gallery</a>
+        <a href="https://w1971490.users.ecs.westminster.ac.uk/HungR/FeedBack.html">Feedback</a>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/sitemap.html">Sitemap</a>       
+    </div>
+
+    <h1>Gallery</h1>
+    <!--task bar placed under the h1, uses unordered list and then get them inline  -->
+    <h2>Welcome to the Gallery</h2>
+    <p id="desc">please click on the thumbnails below for more information</p><!--PlaceHolder  -->
+    
+    <!--lets user change the Background Colour of both Gallery + Extended View  -->
+    <div id="colour">
+        <table>
+            <tr>
+                <td id="white"></td>
+            </tr>
+            <tr>
+                <td id="black"></td>
+            </tr>
+            <tr>
+                <td id="grey"></td>
+            </tr>
+            <tr>
+                <td id="pink"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="fontStyle">
+        <table>
+            <tr>
+                <td id="arial">Arial</td>
+            </tr>
+            <tr>
+                <td id="calibri">Calibri</td>
+            </tr>
+            <tr>
+                <td id="tahoma">Tahoma</td>
+            </tr>
+        </table>
+    </div>
+    <!--placing all the images
+    Helped using the following youtube video: https://www.youtube.com/watch?app=desktop&v=QghhoJBdw7A
+      -->
+    <div class="Gallery">
+        <div class="centeredText">
+            <!--Image found on ALAMY https://www.alamy.com/stock-photo-rotten-green-and-yellow-apples-with-other-waste-on-a-compost-heap-87470642.html?imageid=F9AA2D19-3276-45AF-9938-80674989385F&p=151450&pn=1&searchId=3b278c0e4245387dc8c73f9c938b0c20&searchtype=0   -->
+        <div id="image1"> <img src="FoodWaste.jpg" alt="Food waste" class="brightness image"></div>
+            <p class="imageText">Food Waste</p>
+            <p class="imageText author">Paul Smith</p>
+        </div>
+
+        <div class="centeredText">
+            <!--Image found on Unsplash https://unsplash.com/photos/person-sitting-beside-building-looking-straight-to-the-street-at-golden-hour-IWJH-l-vb4k   -->
+        <div id="image2"> <img src="Homeless.jpg" alt="Homeless" class="brightness image"></div>
+            <p class="imageText">Homelessness</p>
+            <p class="imageText author">EVStyle</p>
+        </div>
+
+        <div class="centeredText">
+            <!--Image found on Unsplash https://unsplash.com/photos/leafless-tree-on-desert-during-daytime-Ekzf8kIKizQ   -->
+            <div id="image3"><img src="ClimateChange.jpg" alt="ClimateChange" class="brightness image"></div>
+            <p class="imageText">Climate Change</p>
+            <p class="imageText author">Peter Burdon</p>
+        </div>
+
+        <div class="centeredText">
+            <!--Image found on Unsplash https://www.alamy.com/south-africa-cape-town-blikkiesdorp-township-residents-waiting-for-image62860664.html?imageid=27DA8FA3-D145-4208-9CDF-2C4E04992000&p=17678&pn=1&searchId=fdc8fa1ad3707f2bbc5766bf7e1d25bb&searchtype=0   -->
+            <div id="image4"><img src="FoodCharity.jpg" alt="Food Charities" class="image brightness "></div>
+            <p class="imageText">Food Charity</p>
+            <p class="imageText author">Charles O. Cecil</p>
+        </div>
+
+        <!--button to let user exit the extended view    -->
+        <div id="extendedView">
+            <div id="close"><span>&times;</span></div>
+            <img src="" alt="" id="imageSRC">
+            <h1 id="expandedTitle"></h1>
+            <div id="imageDesc"></div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/pageEditor_ST4.html">Link to my Page Editor</a> <br>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/content_ST4.html">Link to my Content Page</a>        
+    </footer>
+    <script>
+        // Helped with changing the img src when the user clicks on an image https://stackoverflow.com/questions/11722400/programmatically-change-the-src-of-an-img-tag
+        
+        // when the user clicks on the image, the text and img src changes to show the clicked image info
+        document.getElementById("image1").addEventListener("click",function(){
+            document.getElementById("imageSRC").src="FoodWaste.jpg";
+            document.getElementById("imageSRC").alt="Food Waste Expanded"; 
+            document.getElementById("extendedView").style.display="block"; 
+            document.getElementById("expandedTitle").innerHTML="Food Waste";
+            document.getElementById("imageDesc").innerHTML="Food Waste is an issue that has social, economical and environmental factors.  Millions suffer from hunger and malnutrition.  Food waste occurs at multiple stages of the supply chain from farms, to shops and households.";
+
+        })
+        document.getElementById("image2").addEventListener("click",function(){
+            document.getElementById("imageSRC").src="Homeless.jpg"; 
+            document.getElementById("imageSRC").alt="Homeless Expanded"; 
+
+            document.getElementById("extendedView").style.display="block";
+            document.getElementById("expandedTitle").innerHTML="Homelessness";
+            document.getElementById("imageDesc").innerHTML="A complex social issue that is caused by knock on effects to the persons life.  Unemployment leading to lack of housing, mental illnesses, drug abuse, the feeling of being disconnected from the world.";
+        })
+        document.getElementById("image3").addEventListener("click",function(){
+            document.getElementById("imageSRC").src="ClimateChange.jpg"; 
+            document.getElementById("imageSRC").alt="Climate Change Expanded"; 
+            document.getElementById("extendedView").style.display="block";
+            document.getElementById("expandedTitle").innerHTML="Climate Change ";
+            document.getElementById("imageDesc").innerHTML="Mainly driven by human activities like burning fossil fuels, deforestation, one of our biggest threats to the planet and an increasing issue that leads to more people being left hungry.";
+
+
+        })
+        document.getElementById("image4").addEventListener("click",function(){
+            document.getElementById("imageSRC").src="FoodCharity.jpg"; 
+            document.getElementById("imageSRC").alt="Food Charity Expanded"; 
+            document.getElementById("extendedView").style.display="block";
+            document.getElementById("expandedTitle").innerHTML="Food Charity";
+            document.getElementById("imageDesc").innerHTML="These attempt to address the role of zero hunger on a local scale by providing free food for the poor and needy.  They are a lifeline and provide support to those who are homeless and do no consume enough calories per day.";
+
+
+        })
+
+        //closes the expanded view image
+        document.getElementById("close").addEventListener("click",function(){
+            document.getElementById("extendedView").style.display="none";
+        })
+        // Changes the body background colour
+        document.getElementById("white").addEventListener("click",function(){
+            document.body.style.backgroundColor="white";
+            document.body.style.color="black";
+            document.getElementById("extendedView").style.backgroundColor="white";
+            document.getElementById("close").style.color="black";
+
+        })
+        document.getElementById("black").addEventListener("click", function() {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color="white";
+            document.getElementById("extendedView").style.backgroundColor="black";
+            document.getElementById("close").style.color="white";
+        
+        });
+
+        document.getElementById("grey").addEventListener("click", function() {
+            document.body.style.backgroundColor = "grey";
+            document.body.style.color="black";
+            document.getElementById("extendedView").style.backgroundColor="grey";
+            document.getElementById("close").style.color="black";
+        });
+
+        document.getElementById("pink").addEventListener("click", function() {
+            document.body.style.backgroundColor = "pink";
+            document.body.style.color="black";
+            document.getElementById("extendedView").style.backgroundColor="pink";
+            document.getElementById("close").style.color="black";
+        });
+        //Changes the body font style
+        document.getElementById("arial").addEventListener("click",function(){
+            document.body.style.fontFamily="arial";
+        })
+        
+        document.getElementById("tahoma").addEventListener("click",function(){
+            document.body.style.fontFamily="tahoma";
+        })
+        
+        document.getElementById("calibri").addEventListener("click",function(){
+            document.body.style.fontFamily="calibri";
+        })
+    </script>
+
+</body>
+</html>

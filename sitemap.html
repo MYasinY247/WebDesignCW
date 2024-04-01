@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SiteMap</title>
+    
+    <style>
+        body{
+            margin: 0;
+        }
+        .logo {
+            width: 200px;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            }
+        h1{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #0d3bba;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="sitemapLogo"><img src="Logo.png" alt="logo" class="logo"></div>
+    <div class="navbar">
+        <a href="https://w1971490.users.ecs.westminster.ac.uk/HungR/Home.html">Home</a>
+        <a href="https://w1975658.users.ecs.westminster.ac.uk/HungR/profile.html">User Profile</a>
+        <a href="https://w1975658.users.ecs.westminster.ac.uk/HungR/team.html">Teams Page</a>
+        <a href="">Shop</a>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/gallery.html">Gallery</a>
+        <a href="https://w1971490.users.ecs.westminster.ac.uk/HungR/FeedBack.html">Feedback</a>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/sitemap.html">Sitemap</a>       
+    </div>
+    <h1 style="text-align: center;">Sitemap</h1>
+    <!--helped with making the height and width scalable https://www.geeksforgeeks.org/how-to-make-an-svg-scale-with-its-parent-container -->
+    <svg height="600" width="100%" >
+        <g id="homeButton">
+            <rect x="45%" y="17%" height="8%" width="150"
+            stroke="red" fill="transparent" stroke-width="2px" cursor="pointer"
+            onmouseover="this.style.fill='lightgrey'" onmouseout="this.style.fill='transparent'"></rect>
+            <text fill="black" font-size="14" x="50%" y="21.5%" 
+            font-family="calibri" text-anchor="middle" cursor="pointer">Home (1)</text>
+        </g>
+        <g id="lines" >
+          <!--line coming off homeButton-->  <line x1="50%" y1="25%" x2="50%" y2="35%" style="stroke:red;stroke: width 2px;"></line>
+          <!--horizontal line coming off homeLine--> <line x1="10%" y1="35%" x2="90%" y2="35%" style="stroke:red;stroke: width 2px;"></line>
+          <!--vertical line leading to galleryButton--> <line x1="10%" y1="35%" x2="10%" y2="50%" style="stroke:red;stroke: width 2px;"></line>
+          <!--vertical line leading to shopButton--> <line x1="30%" y1="35%" x2="30%" y2="50%" style="stroke:red;stroke: width 2px;"></line>
+          <!--vertical line leading to userProfileButton--> <line x1="50%" y1="35%" x2="50%" y2="50%" style="stroke:red;stroke: width 2px;"></line>
+          <!--vertical line leading to feedbackButton--> <line x1="70%" y1="35%" x2="70%" y2="50%" style="stroke:red;stroke: width 2px;"></line>
+          <!--vertical line leading to siteMapButton--> <line x1="80%" y1="35%" x2="80%" y2="60%" style="stroke:red;stroke: width 2px;"></line>          
+          <!--vertical line leading to teamButton--> <line x1="90%" y1="35%" x2="90%" y2="50%" style="stroke:red;stroke: width 2px;"></line>
+       
+       
+        </g>
+        <!--Gallery Button-->
+        <!--Helped to change background colour using inline css https://www.quora.com/How-can-change-color-in-hover-with-inline-css#:~:text=You%20can%20change%20the%20color%20of%20an%20element%20when%20hovering,text-decoration%3A%20underline%3B"-->
+        <g id="galleryButton" tabindex="0">
+            <rect x="5%" y="50%" height="8%" width="150"
+            stroke="red" fill="transparent" stroke-width="2px" cursor="pointer"
+            onmouseover="this.style.fill='lightgrey'" onmouseout="this.style.fill='transparent'"></rect>
+            <text fill="black" font-size="14" x="10%" y="54.5%" 
+            font-family="calibri" text-anchor="middle" cursor="pointer">Gallery (2)</text>
+        </g>
+
+        <!--Shop Button-->
+        <g id="shopButton">
+            <rect x="25%" y="50%" height="8%" width="150"
+            stroke="red" fill="transparent" stroke-width="2px" cursor="pointer"
+            onmouseover="this.style.fill='lightgrey'" onmouseout="this.style.fill='transparent'"></rect>
+            <text fill="black" font-size="14" x="30%" y="54.5%" 
+            font-family="calibri" text-anchor="middle" cursor="pointer">Shop (3)</text>
+        </g>
+
+        <!--Feedback Button-->
+        <g id="feedbackButton">
+            <rect x="45%" y="50%" height="8%" width="150"
+            stroke="red" fill="transparent" stroke-width="2px" cursor="pointer"
+            onmouseover="this.style.fill='lightgrey'" onmouseout="this.style.fill='transparent'"></rect>
+            <text fill="black" font-size="14" x="50%" y="54.5%" 
+            font-family="calibri" text-anchor="middle" cursor="pointer">Feedback (4)</text>
+        </g>
+
+        <!--User Profile Button-->
+        <g id="userProfileButton">
+            <rect x="65%" y="50%" height="8%" width="150"
+            stroke="red" fill="transparent" stroke-width="2px" cursor="pointer" 
+            onmouseover="this.style.fill='lightgrey'" onmouseout="this.style.fill='transparent'"></rect>
+            <text fill="black" font-size="14" x="70%" y="54.5%" 
+            font-family="calibri" text-anchor="middle" cursor="pointer" >User Profile (5)</text>
+        
+        </g>
+        <!--Sitemap button-->
+        <g id="siteMapButton">
+            <rect x="75%" y="60%" height="8%" width="150"
+            stroke="red" fill="transparent" stroke-width="2px" cursor="pointer" 
+            onmouseover="this.style.fill='lightgrey'" onmouseout="this.style.fill='transparent'"></rect>
+            <text fill="black" font-size="14" x="80%" y="64.5%" 
+            font-family="calibri" text-anchor="middle" cursor="pointer" >Sitemap (6)</text>
+        
+        </g>
+        <!--Team Button-->
+        <g id="teamButton">
+            <rect x="85%" y="50%" height="8%" width="150"
+            stroke="red" fill="transparent" stroke-width="2px" cursor="pointer"
+            onmouseover="this.style.fill='lightgrey'" onmouseout="this.style.fill='transparent'"></rect>
+            <text fill="black" font-size="14" x="90%" y="54.5%" 
+            font-family="calibri" text-anchor="middle" cursor="pointer">Team (7)</text>
+        </g>
+    
+    </svg>
+    <hr>
+    <footer>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/pageEditor_ST4.html">Link to my Page Editor</a> <br>
+        <a href="https://w1974891.users.ecs.westminster.ac.uk/HungR/content_ST4.html">Link to my Content Page</a>
+    </footer>
+<script>
+    // this lets the user click on a button and take them to the designated page
+    document.getElementById("homeButton").addEventListener("click",function(){
+        document.location.href="https://w1971490.users.ecs.westminster.ac.uk/HungR/Home.html";
+    })
+    document.getElementById("galleryButton").addEventListener("click",function(){
+        document.location.href="https://w1974891.users.ecs.westminster.ac.uk/HungR/gallery.html"; 
+    })
+    document.getElementById("siteMapButton").addEventListener("click",function(){
+        document.location.href="https://w1974891.users.ecs.westminster.ac.uk/HungR/sitemap.html";
+    })
+    document.getElementById("userProfileButton").addEventListener("click",function(){
+        document.location.href=" https://w1975658.users.ecs.westminster.ac.uk/HungR/profile.html";
+        
+    })
+
+    document.getElementById("feedbackButton").addEventListener("click", function(){
+        document.location.href="https://w1971490.users.ecs.westminster.ac.uk/HungR/FeedBack.html";
+
+    })
+    
+    document.getElementById("teamButton").addEventListener("click",function(){
+        document.location.href="https://w1975658.users.ecs.westminster.ac.uk/HungR/team.html";
+    })
+
+    //lets user use the keyboard to interact with the SVG
+    //https://www.w3schools.com/jsref/event_onkeydown.asp helped to implement this
+    document.body.addEventListener("keydown",function(event){
+        if(event.key=="1"){
+            document.location.href="https://w1971490.users.ecs.westminster.ac.uk/HungR/Home.html";
+        }
+        else if(event.key==2){
+            document.location.href="https://w1974891.users.ecs.westminster.ac.uk/HungR/gallery.html";
+
+        }
+        
+        else if(event.key==3){
+            document.location.href="";
+        }
+        else if(event.key==4){
+            document.location.href="https://w1971490.users.ecs.westminster.ac.uk/HungR/FeedBack.html";
+        }
+        else if(event.key==5){
+            document.location.href=" https://w1975658.users.ecs.westminster.ac.uk/HungR/profile.html";
+
+        }
+        else if(event.key==6){
+            document.location.href="https://w1974891.users.ecs.westminster.ac.uk/HungR/sitemap.html";
+        }
+        else if(event.key==7)
+        {
+            document.location.href="https://w1975658.users.ecs.westminster.ac.uk/HungR/team.html"
+        }
+})
+
+
+</script>
+</body>
+</html>
